@@ -1,26 +1,65 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
+import { Hero } from "@/components/site/Hero";
+import { SearchBar } from "@/components/site/SearchBar";
+import { FeaturedCamps } from "@/components/site/FeaturedCamps";
+import { TopClubs } from "@/components/site/TopClubs";
+import { ExperienceCards } from "@/components/site/ExperienceCards";
+import { WhyUs } from "@/components/site/WhyUs";
+import { TripsBlock } from "@/components/site/TripsBlock";
+import { LatestNews } from "@/components/site/LatestNews";
+import { Newsletter } from "@/components/site/Newsletter";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: Home,
+  head: () => ({
+    meta: [
+      { title: "Soccer Camps Pro — Find the Best Youth Soccer Camps" },
+      {
+        name: "description",
+        content:
+          "Discover official and trusted youth soccer camps from top international clubs like Arsenal, PSG and FC Bayern. Search by country, city, club, age group and month.",
+      },
+      {
+        property: "og:title",
+        content: "Soccer Camps Pro — Find the Best Youth Soccer Camps",
+      },
+      {
+        property: "og:description",
+        content:
+          "Official youth soccer camps from top international clubs across North America.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=1400&q=80",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=1400&q=80",
+      },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <Hero />
+        <SearchBar />
+        <FeaturedCamps />
+        <TopClubs />
+        <ExperienceCards />
+        <WhyUs />
+        <TripsBlock />
+        <LatestNews />
+        <Newsletter />
+      </main>
+      <Footer />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
