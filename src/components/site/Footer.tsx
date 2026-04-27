@@ -74,10 +74,12 @@ export function Footer() {
           <p>© {new Date().getFullYear()} Soccer Camps Pro. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <a href="mailto:hello@soccercampspro.com" className="inline-flex items-center gap-2 hover:text-accent">
-              <Mail className="h-4 w-4" /> hello@soccercampspro.com
+              <Mail className="h-4 w-4" />
+              <span>hello@soccercampspro.com</span>
             </a>
             <a href="tel:+1000000000" className="inline-flex items-center gap-2 hover:text-accent">
-              <Phone className="h-4 w-4" /> +1 (000) 000-0000
+              <Phone className="h-4 w-4" />
+              <span>+1 (000) 000-0000</span>
             </a>
           </div>
         </div>
