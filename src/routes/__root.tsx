@@ -44,6 +44,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Soccer Camps Pro — Find the Best Youth Soccer Camps" },
+      { name: "description", content: "Soccer Camp Visuals redesigns the Soccer Camps Pro homepage with a premium, sporty, and modern aesthetic." },
+      { property: "og:description", content: "Soccer Camp Visuals redesigns the Soccer Camps Pro homepage with a premium, sporty, and modern aesthetic." },
+      { name: "twitter:description", content: "Soccer Camp Visuals redesigns the Soccer Camps Pro homepage with a premium, sporty, and modern aesthetic." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/742c1fed-6aba-4fe3-bda6-629361f85c4c/id-preview-d70883e6--31487cd5-0bf6-45c0-a8f3-d079cc71926f.lovable.app-1777301602014.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/742c1fed-6aba-4fe3-bda6-629361f85c4c/id-preview-d70883e6--31487cd5-0bf6-45c0-a8f3-d079cc71926f.lovable.app-1777301602014.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
