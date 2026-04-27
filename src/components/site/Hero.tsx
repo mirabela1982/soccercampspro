@@ -1,16 +1,30 @@
 import { ArrowRight } from "lucide-react";
+import heroImage from "@/assets/hero-soccer.jpg";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-primary text-primary-foreground">
+      {/* background image */}
+      <img
+        src={heroImage}
+        alt="Kids playing soccer on a green field"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      {/* navy overlay for legibility */}
+      <div aria-hidden className="absolute inset-0 bg-primary/70" />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/60 to-primary/80"
+      />
+
       {/* lime blob top right */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-accent/25 blur-3xl"
+        className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-accent/20 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/3 top-10 h-40 w-40 rounded-full bg-cta/30 blur-3xl"
+        className="pointer-events-none absolute left-1/3 top-10 h-40 w-40 rounded-full bg-cta/25 blur-3xl"
       />
 
       <div className="relative mx-auto max-w-4xl px-4 pb-28 pt-10 text-center md:px-6 md:pb-32 md:pt-14 lg:px-8 lg:pb-36 lg:pt-16">
