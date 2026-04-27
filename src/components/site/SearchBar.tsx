@@ -38,7 +38,7 @@ function Field({ label, placeholder, options }: FieldProps) {
 
 export function SearchBar() {
   return (
-    <section id="search" className="relative -mt-20 px-4 md:-mt-28 md:px-6 lg:-mt-32 lg:px-8">
+    <section id="search" className="relative -mt-14 px-4 md:-mt-20 md:px-6 lg:-mt-24 lg:px-8">
       <div className="relative mx-auto max-w-6xl rounded-3xl bg-card p-6 shadow-2xl ring-1 ring-border md:p-8">
         <div className="mb-6 flex items-end justify-between">
           <div>
