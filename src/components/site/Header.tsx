@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
+import logoUrl from "@/assets/logo.svg";
 
 const navItems = [
   { label: "Camps", href: "#camps" },
@@ -10,17 +11,12 @@ const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
-function Logo({ inverted = false }: { inverted?: boolean }) {
-  const text = inverted ? "text-primary-foreground" : "text-primary";
+function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-2">
-      <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent">
-        <span className="absolute inset-1 rounded-full border-2 border-primary/80" />
-        <span className="absolute h-1.5 w-5 rotate-45 bg-primary/80" />
-        <span className="absolute h-1.5 w-5 -rotate-45 bg-primary/80" />
-      </span>
-      <span className={`font-display text-lg font-bold leading-none ${text}`}>
-        Soccer Camps <span className="text-cta">Pro</span>
+    <Link to="/" className="flex items-center gap-3">
+      <img src={logoUrl} alt="Soccer Camps Pro" className="h-10 w-auto md:h-12" />
+      <span className="hidden font-display text-base font-extrabold uppercase tracking-widest text-primary-foreground sm:inline">
+        Soccer Camps <span className="text-accent">Pro</span>
       </span>
     </Link>
   );
@@ -30,8 +26,8 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6 lg:px-8">
+    <header className="absolute inset-x-0 top-0 z-50 w-full bg-transparent">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:h-20 md:px-6 lg:px-8">
         <Logo />
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -39,7 +35,7 @@ export function Header() {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-semibold text-foreground/80 transition-colors hover:text-cta"
+              className="text-xs font-bold uppercase tracking-[0.18em] text-primary-foreground/90 transition-colors hover:text-accent"
             >
               {item.label}
             </a>
@@ -49,7 +45,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <a
             href="#search"
-            className="hidden rounded-full bg-cta px-5 py-2.5 text-sm font-semibold text-cta-foreground shadow-sm transition-transform hover:scale-[1.02] md:inline-flex"
+            className="hidden rounded-full bg-cta px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-cta-foreground shadow-sm transition-transform hover:scale-[1.02] md:inline-flex"
           >
             Find Your Camp
           </a>
@@ -57,7 +53,7 @@ export function Header() {
             type="button"
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-primary lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-primary-foreground/40 text-primary-foreground lg:hidden"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -65,14 +61,14 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
+        <div className="border-t border-primary-foreground/10 bg-primary/90 backdrop-blur lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-semibold text-foreground hover:bg-muted"
+                className="rounded-lg px-3 py-3 text-sm font-bold uppercase tracking-widest text-primary-foreground hover:bg-primary-foreground/10"
               >
                 {item.label}
               </a>
@@ -80,7 +76,7 @@ export function Header() {
             <a
               href="#search"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-cta px-5 py-3 text-sm font-semibold text-cta-foreground"
+              className="mt-2 inline-flex items-center justify-center rounded-full bg-cta px-5 py-3 text-xs font-bold uppercase tracking-widest text-cta-foreground"
             >
               Find Your Camp
             </a>
