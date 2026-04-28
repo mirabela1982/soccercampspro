@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/site/Hero";
-import { SearchBar } from "@/components/site/SearchBar";
 import { FeaturedCamps } from "@/components/site/FeaturedCamps";
 import { TopClubs } from "@/components/site/TopClubs";
 import { ExperienceCards } from "@/components/site/ExperienceCards";
@@ -52,7 +51,7 @@ function Home() {
           <Header />
           <Hero />
         </div>
-        <SearchBar />
+        
         <FeaturedCamps />
         <TopClubs />
         <ExperienceCards />
