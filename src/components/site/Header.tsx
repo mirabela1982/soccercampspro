@@ -13,11 +13,8 @@ const navItems = [
 
 function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-3">
-      <img src={logoUrl} alt="Soccer Camps Pro" className="h-10 w-auto md:h-12" />
-      <span className="hidden font-display text-base font-extrabold uppercase tracking-widest text-primary-foreground sm:inline">
-        Soccer Camps <span className="text-accent">Pro</span>
-      </span>
+    <Link to="/" className="flex items-center">
+      <img src={logoUrl} alt="Soccer Camps Pro" className="h-12 w-auto md:h-14" />
     </Link>
   );
 }
@@ -30,12 +27,12 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:h-20 md:px-6 lg:px-8">
         <Logo />
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-10 lg:flex">
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="text-xs font-bold uppercase tracking-[0.18em] text-primary-foreground/90 transition-colors hover:text-accent"
+              className="text-base font-bold uppercase tracking-[0.18em] text-primary-foreground/90 transition-colors hover:text-accent"
             >
               {item.label}
             </a>

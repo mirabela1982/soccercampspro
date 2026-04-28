@@ -62,14 +62,14 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Continuous curved shape at the bottom — single clean arc */}
+      {/* Curved divider — arc opening downward (concave into next section) */}
       <svg
         aria-hidden
         viewBox="0 0 1440 220"
         preserveAspectRatio="none"
         className="absolute bottom-0 left-0 h-[120px] w-full text-background md:h-[180px]"
       >
-        <path fill="currentColor" d="M0,220 L0,140 Q720,-40 1440,140 L1440,220 Z" />
+        <path fill="currentColor" d="M0,220 L0,40 Q720,260 1440,40 L1440,220 Z" />
       </svg>
     </section>
   );
