@@ -30,12 +30,12 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:h-20 md:px-6 lg:px-8">
         <Logo />
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-10 lg:flex">
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="text-xs font-bold uppercase tracking-[0.18em] text-primary-foreground/90 transition-colors hover:text-accent"
+              className="text-base font-bold uppercase tracking-[0.18em] text-primary-foreground/90 transition-colors hover:text-accent"
             >
               {item.label}
             </a>
