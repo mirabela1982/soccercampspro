@@ -47,9 +47,11 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
       <main>
-        <Hero />
+        <div className="relative">
+          <Header />
+          <Hero />
+        </div>
         <SearchBar />
         <FeaturedCamps />
         <TopClubs />
