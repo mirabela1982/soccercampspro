@@ -13,11 +13,8 @@ const navItems = [
 
 function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-3">
-      <img src={logoUrl} alt="Soccer Camps Pro" className="h-10 w-auto md:h-12" />
-      <span className="hidden font-display text-base font-extrabold uppercase tracking-widest text-primary-foreground sm:inline">
-        Soccer Camps <span className="text-accent">Pro</span>
-      </span>
+    <Link to="/" className="flex items-center">
+      <img src={logoUrl} alt="Soccer Camps Pro" className="h-12 w-auto md:h-14" />
     </Link>
   );
 }
