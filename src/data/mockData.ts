@@ -18,6 +18,7 @@ export type Club = {
   camps: number;
   cities: number;
   image: string;
+  logo: string;
   badgeColor: string;
 };
 
@@ -80,8 +81,8 @@ export const topClubs: Club[] = [
       "Train with the official methodology of one of England's most iconic clubs.",
     camps: 12,
     cities: 6,
-    image:
-      "https://images.unsplash.com/photo-1577223625816-7546f13df25d?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/stadium-arsenal.jpg",
+    logo: "https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg",
     badgeColor: "bg-cta",
   },
   {
@@ -91,8 +92,8 @@ export const topClubs: Club[] = [
       "Experience the Parisian style of play through PSG's official youth program.",
     camps: 9,
     cities: 5,
-    image:
-      "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/stadium-psg.jpg",
+    logo: "https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg",
     badgeColor: "bg-primary",
   },
   {
@@ -102,8 +103,8 @@ export const topClubs: Club[] = [
       "Learn the German champions' methodology and competitive mindset.",
     camps: 8,
     cities: 4,
-    image:
-      "https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/stadium-bayern.jpg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg",
     badgeColor: "bg-accent",
   },
 ];

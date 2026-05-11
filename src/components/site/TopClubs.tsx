@@ -31,16 +31,21 @@ export function TopClubs() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={club.image}
-                  alt={club.name}
+                  alt={`${club.name} stadium`}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
-                  <h3 className="font-display text-2xl font-bold text-primary-foreground">
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3">
+                  <h3 className="font-display text-2xl font-bold text-primary-foreground drop-shadow">
                     {club.name}
                   </h3>
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent font-display text-xs font-bold text-primary">
-                    {club.id.slice(0, 3).toUpperCase()}
+                  <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg ring-2 ring-accent">
+                    <img
+                      src={club.logo}
+                      alt={`${club.name} logo`}
+                      className="h-10 w-10 object-contain"
+                      loading="lazy"
+                    />
                   </span>
                 </div>
               </div>
