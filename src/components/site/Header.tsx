@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import logoUrl from "@/assets/logo.svg";
 
+const campsItems = [
+  { label: "Arsenal Soccer Camp — Austin", to: "/soccer-camp-austin-arsenal" },
+];
+
 const navItems = [
-  { label: "Camps", href: "#camps" },
   { label: "Trips", href: "#trips" },
   { label: "Clubs", href: "#clubs" },
   { label: "Blog", href: "#news" },
@@ -28,6 +31,25 @@ export function Header() {
         <Logo />
 
         <nav className="hidden items-center gap-10 lg:flex">
+          <div className="group relative">
+            <button
+              type="button"
+              className="flex items-center gap-1 text-base font-bold uppercase tracking-[0.18em] text-primary-foreground/90 transition-colors hover:text-accent"
+            >
+              Camps <ChevronDown className="h-4 w-4" />
+            </button>
+            <div className="invisible absolute left-1/2 top-full z-50 mt-2 w-72 -translate-x-1/2 rounded-xl bg-primary p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100">
+              {campsItems.map((c) => (
+                <Link
+                  key={c.to}
+                  to={c.to}
+                  className="block rounded-lg px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10 hover:text-accent"
+                >
+                  {c.label}
+                </Link>
+              ))}
+            </div>
+          </div>
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -60,6 +82,17 @@ export function Header() {
       {open && (
         <div className="border-t border-primary-foreground/10 bg-primary/90 backdrop-blur lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
+            <div className="px-3 py-2 text-xs font-bold uppercase tracking-widest text-primary-foreground/60">Camps</div>
+            {campsItems.map((c) => (
+              <Link
+                key={c.to}
+                to={c.to}
+                onClick={() => setOpen(false)}
+                className="rounded-lg px-3 py-3 text-sm font-bold text-primary-foreground hover:bg-primary-foreground/10"
+              >
+                {c.label}
+              </Link>
+            ))}
             {navItems.map((item) => (
               <a
                 key={item.label}
