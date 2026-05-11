@@ -46,7 +46,7 @@ export function ExperienceCards() {
           {experiences.map(({ icon: Icon, title, description }) => (
             <article
               key={title}
-              className="group flex flex-col rounded-3xl bg-background p-7 text-foreground shadow-xl ring-1 ring-primary-foreground/10 transition-transform hover:-translate-y-1"
+              className="group flex flex-col rounded-3xl bg-card p-7 text-foreground shadow-xl ring-1 ring-border transition-all hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-accent"
             >
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent text-primary">
                 <Icon className="h-6 w-6" />

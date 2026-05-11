@@ -29,7 +29,7 @@ export function FeaturedCamps() {
         {featuredCamps.map((camp) => (
           <article
             key={camp.id}
-            className="group flex flex-col overflow-hidden rounded-3xl bg-card shadow-sm ring-1 ring-border transition-all hover:-translate-y-1 hover:shadow-xl"
+            className="group flex flex-col overflow-hidden rounded-3xl bg-card shadow-sm ring-1 ring-border transition-all hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-accent"
           >
             <div className="relative aspect-[16/10] overflow-hidden">
               <img
