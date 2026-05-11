@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import logoUrl from "@/assets/logo.svg";
 
+const campsItems = [
+  { label: "Arsenal Soccer Camp — Austin", to: "/soccer-camp-austin-arsenal" },
+];
+
 const navItems = [
-  { label: "Camps", href: "#camps" },
   { label: "Trips", href: "#trips" },
   { label: "Clubs", href: "#clubs" },
   { label: "Blog", href: "#news" },
