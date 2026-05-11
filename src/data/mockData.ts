@@ -17,6 +17,7 @@ export type Club = {
   description: string;
   camps: number;
   cities: number;
+  players: number;
   image: string;
   logo: string;
   badgeColor: string;
