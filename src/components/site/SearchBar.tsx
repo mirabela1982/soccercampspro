@@ -6,7 +6,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ageGroups, cities, clubs, countries, months } from "@/data/mockData";
+import { cities, clubs, countries } from "@/data/mockData";
 
 type FieldProps = {
   label: string;
@@ -50,16 +50,14 @@ export function SearchBar() {
             </h2>
           </div>
           <div className="hidden text-xs text-muted-foreground md:block">
-            5 filters · instant results
+            3 filters · instant results
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-6 lg:gap-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-3">
           <Field label="Country" placeholder="All countries" options={countries} />
           <Field label="City" placeholder="All cities" options={cities} />
           <Field label="Club" placeholder="All clubs" options={clubs} />
-          <Field label="Age Group" placeholder="All ages" options={ageGroups} />
-          <Field label="Month" placeholder="Any month" options={months} />
 
           <div className="flex flex-col gap-1.5">
             <span className="hidden text-[11px] font-semibold uppercase tracking-widest text-transparent lg:block">
