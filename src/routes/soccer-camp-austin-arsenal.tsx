@@ -197,7 +197,7 @@ function CampFacts() {
   return (
     <section
       id="camp-details"
-      className="mx-auto -mt-16 max-w-7xl px-4 pb-12 md:-mt-24 md:px-6 lg:px-8"
+      className="mx-auto mt-12 max-w-7xl px-4 pb-12 md:mt-16 md:px-6 lg:px-8"
     >
       <div className="rounded-3xl border-2 border-accent bg-card p-6 shadow-xl md:p-10">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
