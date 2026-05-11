@@ -1,5 +1,12 @@
 import { ArrowRight, Calendar, MapPin, Users } from "lucide-react";
 import { featuredCamps } from "@/data/mockData";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export function FeaturedCamps() {
   return (
@@ -25,63 +32,72 @@ export function FeaturedCamps() {
         </a>
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {featuredCamps.map((camp) => (
-          <article
-            key={camp.id}
-            className="group flex flex-col overflow-hidden rounded-3xl bg-card shadow-sm border-2 border-accent transition-all hover:-translate-y-1 hover:shadow-2xl"
-          >
-            <div className="relative aspect-[16/10] overflow-hidden">
-              <img
-                src={camp.image}
-                alt={camp.name}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <span className="absolute left-4 top-4 inline-flex items-center rounded-full bg-cta px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cta-foreground">
-                {camp.club}
-              </span>
-              <span className="absolute right-4 top-4 inline-flex items-center rounded-full bg-background/95 px-3 py-1 text-xs font-semibold text-primary">
-                {camp.city}
-              </span>
-            </div>
+      <Carousel
+        opts={{ align: "start", loop: true }}
+        className="mt-12"
+      >
+        <CarouselContent className="-ml-6">
+          {featuredCamps.map((camp) => (
+            <CarouselItem
+              key={camp.id}
+              className="pl-6 md:basis-1/2 lg:basis-1/3"
+            >
+              <article className="group flex h-full flex-col overflow-hidden rounded-3xl bg-card shadow-sm border-2 border-accent transition-all hover:-translate-y-1 hover:shadow-2xl">
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={camp.image}
+                    alt={camp.name}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute left-4 top-4 inline-flex items-center rounded-full bg-cta px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cta-foreground">
+                    {camp.club}
+                  </span>
+                  <span className="absolute right-4 top-4 inline-flex items-center rounded-full bg-background/95 px-3 py-1 text-xs font-semibold text-primary">
+                    {camp.city}
+                  </span>
+                </div>
 
-            <div className="flex flex-1 flex-col p-6">
-              <h3 className="font-display text-lg font-bold text-primary">
-                {camp.name}
-              </h3>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-display text-lg font-bold text-primary">
+                    {camp.name}
+                  </h3>
 
-              <ul className="mt-4 flex-1 space-y-2 text-sm text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4 text-cta" /> {camp.date}
-                </li>
-                <li className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-cta" /> {camp.venue}
-                </li>
-                <li className="flex items-center gap-2">
-                  <Users className="h-4 w-4 text-cta" /> {camp.ageGroup}
-                </li>
-              </ul>
+                  <ul className="mt-4 flex-1 space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4 text-cta" /> {camp.date}
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4 text-cta" /> {camp.venue}
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Users className="h-4 w-4 text-cta" /> {camp.ageGroup}
+                    </li>
+                  </ul>
 
-              <div className="mt-6 flex items-center justify-between border-t border-border pt-5">
-                <div>
-                  <div className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
-                    From
-                  </div>
-                  <div className="font-display text-xl font-bold text-primary">
-                    {camp.price}
+                  <div className="mt-6 flex items-center justify-between border-t border-border pt-5">
+                    <div>
+                      <div className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
+                        From
+                      </div>
+                      <div className="font-display text-xl font-bold text-primary">
+                        {camp.price}
+                      </div>
+                    </div>
+                    <a
+                      href="#"
+                      className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2.5 text-xs font-semibold text-primary-foreground transition-colors hover:bg-cta"
+                    >
+                      Learn More <ArrowRight className="h-3.5 w-3.5" />
+                    </a>
                   </div>
                 </div>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2.5 text-xs font-semibold text-primary-foreground transition-colors hover:bg-cta"
-                >
-                  Learn More <ArrowRight className="h-3.5 w-3.5" />
-                </a>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
+              </article>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="hidden md:flex -left-5 h-12 w-12 border-2 border-accent bg-background text-primary hover:bg-accent hover:text-primary" />
+        <CarouselNext className="hidden md:flex -right-5 h-12 w-12 border-2 border-accent bg-background text-primary hover:bg-accent hover:text-primary" />
+      </Carousel>
     </section>
   );
 }
