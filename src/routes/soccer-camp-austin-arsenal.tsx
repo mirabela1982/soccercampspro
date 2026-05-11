@@ -475,8 +475,8 @@ function PhaseTwoInvitation() {
 
       <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-accent-foreground">
-            <span className="h-1.5 w-1.5 rounded-full bg-cta" />
+          <span className="inline-flex items-center gap-2 rounded-full bg-cta px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-cta-foreground">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             Phase 02 · Get an Invitation
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold text-primary md:text-5xl">
