@@ -9,8 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SoccerCampAustinArsenalRouteImport } from './routes/soccer-camp-austin-arsenal'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SoccerCampAustinArsenalRoute = SoccerCampAustinArsenalRouteImport.update({
+  id: '/soccer-camp-austin-arsenal',
+  path: '/soccer-camp-austin-arsenal',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +25,39 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/soccer-camp-austin-arsenal': typeof SoccerCampAustinArsenalRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/soccer-camp-austin-arsenal': typeof SoccerCampAustinArsenalRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/soccer-camp-austin-arsenal': typeof SoccerCampAustinArsenalRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/soccer-camp-austin-arsenal'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/soccer-camp-austin-arsenal'
+  id: '__root__' | '/' | '/soccer-camp-austin-arsenal'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SoccerCampAustinArsenalRoute: typeof SoccerCampAustinArsenalRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/soccer-camp-austin-arsenal': {
+      id: '/soccer-camp-austin-arsenal'
+      path: '/soccer-camp-austin-arsenal'
+      fullPath: '/soccer-camp-austin-arsenal'
+      preLoaderRoute: typeof SoccerCampAustinArsenalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +70,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SoccerCampAustinArsenalRoute: SoccerCampAustinArsenalRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
