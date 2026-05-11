@@ -34,7 +34,7 @@ export function FeaturedCamps() {
 
       <Carousel
         opts={{ align: "start", loop: true }}
-        className="mt-12 md:px-16"
+        className="relative mt-12"
       >
         <CarouselContent className="-ml-6">
           {featuredCamps.map((camp) => (
