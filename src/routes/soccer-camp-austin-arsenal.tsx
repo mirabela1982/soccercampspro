@@ -114,8 +114,11 @@ function Hero() {
       />
 
       <div className="relative mx-auto flex w-full max-w-5xl flex-1 flex-col items-center justify-center px-4 pb-32 pt-28 text-center md:px-6 md:pb-40 md:pt-32">
-        <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] backdrop-blur-sm">
-          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+        <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-accent-foreground shadow-lg">
+          <span className="h-1.5 w-1.5 rounded-full bg-cta" />
+          Phase 01 · Austin Soccer Camp
+        </span>
+        <span className="mt-3 inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] backdrop-blur-sm">
           Official Arsenal Camp · Austin, TX
         </span>
 
