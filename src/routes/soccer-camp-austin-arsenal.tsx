@@ -74,6 +74,7 @@ function AustinArsenalPage() {
         <CampFacts />
         <Intro />
         <TrainingProgram />
+        <ThreePhases />
         <Includes />
         <Benefits />
         <PathwayToLondon />
