@@ -95,8 +95,8 @@ export function FeaturedCamps() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden md:flex left-0 h-12 w-12 border-2 border-cta bg-accent text-cta hover:bg-accent/90 hover:text-cta" />
-        <CarouselNext className="hidden md:flex right-0 h-12 w-12 border-2 border-cta bg-accent text-cta hover:bg-accent/90 hover:text-cta" />
+        <CarouselPrevious className="hidden md:flex -left-14 h-12 w-12 border-2 border-cta bg-cta text-accent hover:bg-cta/90 hover:text-accent [&_svg]:!size-6 [&_svg]:!stroke-[4]" />
+        <CarouselNext className="hidden md:flex -right-14 h-12 w-12 border-2 border-cta bg-cta text-accent hover:bg-cta/90 hover:text-accent [&_svg]:!size-6 [&_svg]:!stroke-[4]" />
       </Carousel>
     </section>
   );
