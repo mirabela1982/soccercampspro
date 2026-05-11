@@ -578,23 +578,9 @@ function PhaseThreeLondon() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
-          <article className="rounded-3xl border-2 border-accent bg-card p-8 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl">
-            <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cta text-cta-foreground">
-              <Trophy className="h-5 w-5" />
-            </span>
-            <h4 className="mt-5 font-display text-2xl font-bold text-primary">
-              Arsenal World Challenge
-            </h4>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              An international tournament that brings together teams from
-              Arsenal Football Development camps around the world to compete at
-              the home of Arsenal — an unforgettable experience of values,
-              football and friendship.
-            </p>
-          </article>
+        <div className="mt-14 grid gap-6 md:grid-cols-1">
           <article
-            className="rounded-3xl border-2 bg-card p-8 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl"
+            className="mx-auto max-w-2xl rounded-3xl border-2 bg-card p-8 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl"
             style={{ borderColor: "#85A9D3" }}
           >
             <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
