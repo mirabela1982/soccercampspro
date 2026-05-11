@@ -132,7 +132,7 @@ export const news: NewsItem[] = [
       "Paris Saint-Germain announces a wider footprint in North America for the upcoming youth season.",
     date: "Apr 14, 2026",
     image:
-      "https://images.unsplash.com/photo-1606925207923-c2c89c4e1da6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: "3",
