@@ -483,7 +483,7 @@ function PhaseTwoInvitation() {
             Stand Out and Get{" "}
             <span className="relative inline-block">
               <span className="relative z-10">Invited to London</span>
-              <span className="absolute -bottom-1 left-0 z-0 h-2.5 w-full -skew-x-6 bg-accent/70" />
+              <span className="absolute -bottom-1 left-0 z-0 h-2.5 w-full -skew-x-6 bg-cta/70" />
             </span>
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -513,9 +513,9 @@ function PhaseTwoInvitation() {
           ].map((b) => (
             <article
               key={b.n}
-              className="group relative overflow-hidden rounded-3xl border border-border bg-card p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-accent hover:shadow-xl"
+              className="group relative overflow-hidden rounded-3xl border border-border bg-card p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-cta hover:shadow-xl"
             >
-              <span className="font-display text-6xl font-extrabold text-accent transition-colors group-hover:text-cta">
+              <span className="font-display text-6xl font-extrabold text-cta transition-colors">
                 0{b.n}
               </span>
               <h4 className="mt-4 font-display text-xl font-bold text-primary">
