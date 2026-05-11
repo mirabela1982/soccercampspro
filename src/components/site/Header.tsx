@@ -82,6 +82,17 @@ export function Header() {
       {open && (
         <div className="border-t border-primary-foreground/10 bg-primary/90 backdrop-blur lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
+            <div className="px-3 py-2 text-xs font-bold uppercase tracking-widest text-primary-foreground/60">Camps</div>
+            {campsItems.map((c) => (
+              <Link
+                key={c.to}
+                to={c.to}
+                onClick={() => setOpen(false)}
+                className="rounded-lg px-3 py-3 text-sm font-bold text-primary-foreground hover:bg-primary-foreground/10"
+              >
+                {c.label}
+              </Link>
+            ))}
             {navItems.map((item) => (
               <a
                 key={item.label}
