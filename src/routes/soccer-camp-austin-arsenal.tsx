@@ -363,7 +363,102 @@ function TrainingProgram() {
   );
 }
 
-/* ---------------- Includes ---------------- */
+/* ---------------- Three Phases ---------------- */
+function ThreePhases() {
+  const phases = [
+    {
+      tag: "Phase 01",
+      title: "Foundation",
+      subtitle: "Days 1–2 · Technical base",
+      text: "Players reset the fundamentals the Arsenal way: first touch, body shape, passing accuracy and 1v1 confidence. Coaches assess every camper to set the right development goals for the week.",
+      points: ["Ball mastery & control", "Passing & receiving", "1v1 attacking and defending"],
+    },
+    {
+      tag: "Phase 02",
+      title: "Development",
+      subtitle: "Days 3–4 · Tactical understanding",
+      text: "Training shifts to position-specific work and small-sided games. Players learn what each role demands and how to read the game faster under real pressure.",
+      points: ["Position-specific drills", "Small-sided games", "Decision making & game IQ"],
+    },
+    {
+      tag: "Phase 03",
+      title: "Performance",
+      subtitle: "Day 5 · Compete the Arsenal way",
+      text: "Full-sided matches, tactical scenarios and a final showcase where campers put the whole week into action — competing with intensity, teamwork and the values that define the club.",
+      points: ["Full-sided match play", "Team tactics in action", "Final showcase & certificate"],
+    },
+  ];
+
+  return (
+    <section className="relative overflow-hidden bg-primary text-primary-foreground">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-accent/15 blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-cta/20 blur-3xl"
+      />
+
+      <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="text-[11px] font-semibold uppercase tracking-widest text-accent">
+            The methodology
+          </span>
+          <h2 className="mt-2 font-display text-3xl font-bold md:text-5xl">
+            A week built in{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10">three phases</span>
+              <span className="absolute -bottom-1 left-0 z-0 h-2.5 w-full -skew-x-6 bg-accent/70" />
+            </span>
+          </h2>
+          <p className="mt-5 text-base text-primary-foreground/80 md:text-lg">
+            Every day at the Arsenal Austin camp follows a clear progression —
+            so players leave the week measurably better than when they arrived.
+          </p>
+        </div>
+
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
+          {phases.map((p) => (
+            <article
+              key={p.tag}
+              className="group relative flex flex-col overflow-hidden rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5 p-7 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent"
+            >
+              <div className="flex items-center justify-between">
+                <span className="rounded-full bg-accent px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-accent-foreground">
+                  {p.tag}
+                </span>
+                <span className="font-display text-5xl font-extrabold text-accent/40 transition-colors group-hover:text-accent/70">
+                  {p.tag.split(" ")[1]}
+                </span>
+              </div>
+              <h3 className="mt-6 font-display text-2xl font-bold md:text-3xl">
+                {p.title}
+              </h3>
+              <div className="mt-1 text-[11px] font-semibold uppercase tracking-widest text-accent">
+                {p.subtitle}
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-primary-foreground/80">
+                {p.text}
+              </p>
+              <ul className="mt-6 space-y-2 border-t border-primary-foreground/15 pt-5">
+                {p.points.map((pt) => (
+                  <li
+                    key={pt}
+                    className="flex items-start gap-2 text-sm text-primary-foreground/90"
+                  >
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                    {pt}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 function Includes() {
   const items = [
     "5 days of training with official Arsenal coaches",
