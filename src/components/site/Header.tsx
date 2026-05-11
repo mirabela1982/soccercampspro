@@ -31,6 +31,25 @@ export function Header() {
         <Logo />
 
         <nav className="hidden items-center gap-10 lg:flex">
+          <div className="group relative">
+            <button
+              type="button"
+              className="flex items-center gap-1 text-base font-bold uppercase tracking-[0.18em] text-primary-foreground/90 transition-colors hover:text-accent"
+            >
+              Camps <ChevronDown className="h-4 w-4" />
+            </button>
+            <div className="invisible absolute left-1/2 top-full z-50 mt-2 w-72 -translate-x-1/2 rounded-xl bg-primary p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100">
+              {campsItems.map((c) => (
+                <Link
+                  key={c.to}
+                  to={c.to}
+                  className="block rounded-lg px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10 hover:text-accent"
+                >
+                  {c.label}
+                </Link>
+              ))}
+            </div>
+          </div>
           {navItems.map((item) => (
             <a
               key={item.label}
