@@ -20,7 +20,7 @@ export function Newsletter() {
         aria-hidden
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
-        className="absolute left-0 top-0 h-[80px] w-full text-background md:h-[120px]"
+        className="absolute left-0 top-0 h-[80px] w-full text-secondary md:h-[120px]"
       >
         <path
           fill="currentColor"
