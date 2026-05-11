@@ -67,10 +67,10 @@ export function TopClubs() {
                   <div className="h-8 w-px bg-border" />
                   <div>
                     <div className="font-display text-xl font-bold text-primary">
-                      {club.cities}
+                    {club.players}
                     </div>
                     <div className="text-[11px] uppercase tracking-widest text-muted-foreground">
-                      Cities
+                      Players
                     </div>
                   </div>
                 </div>
