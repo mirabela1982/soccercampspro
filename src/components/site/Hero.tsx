@@ -37,7 +37,7 @@ export function Hero() {
         </span>
 
         <h1 className="mt-6 font-display text-4xl font-extrabold uppercase leading-[1.02] tracking-tight text-primary-foreground md:text-6xl lg:text-7xl">
-          Find the Best Youth
+          Find the Best
           <br />
           <span className="text-accent">Soccer Camps</span>
         </h1>
