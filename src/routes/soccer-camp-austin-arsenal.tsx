@@ -119,10 +119,6 @@ function Hero() {
           <span className="h-1.5 w-1.5 rounded-full bg-cta" />
           Phase 01 · Austin Soccer Camp
         </span>
-        <span className="mt-3 inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] backdrop-blur-sm">
-          Official Arsenal Camp · Austin, TX
-        </span>
-
         <h1 className="mt-6 font-display text-4xl font-extrabold uppercase leading-[1.02] tracking-tight md:text-6xl lg:text-7xl">
           Arsenal Soccer Camp
           <br />
