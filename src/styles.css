@@ -49,40 +49,43 @@
 :root {
   --radius: 0.75rem;
 
-  /* Warm off-white page background, like Premier Padel */
-  --background: oklch(0.985 0.005 95);
-  --foreground: oklch(0.18 0.04 260);
+  /* Brand palette
+   * Navy   #222B4D — primary (hero, header, footer)
+   * White  #FFFFFF — background
+   * Sky    #85A9D3 — soft secondary / muted blue
+   * Lime   #DDE383 — accent (highlight borders, glow)
+   * Green  #006D57 — CTA
+   */
+  --background: #FFFFFF;
+  --foreground: #222B4D;
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.04 260);
+  --card: #FFFFFF;
+  --card-foreground: #222B4D;
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.04 260);
+  --popover: #FFFFFF;
+  --popover-foreground: #222B4D;
 
-  /* Deep navy — header, footer, hero, dark blocks */
-  --primary: oklch(0.22 0.06 260);
-  --primary-foreground: oklch(0.985 0.005 95);
+  --primary: #222B4D;
+  --primary-foreground: #FFFFFF;
 
-  --secondary: oklch(0.96 0.01 250);
-  --secondary-foreground: oklch(0.22 0.06 260);
+  --secondary: #EEF3F9;
+  --secondary-foreground: #222B4D;
 
-  --muted: oklch(0.95 0.01 250);
-  --muted-foreground: oklch(0.5 0.03 260);
+  --muted: #F4F7FB;
+  --muted-foreground: #5A6A85;
 
-  /* Lime / yellow-green accent */
-  --accent: oklch(0.88 0.18 115);
-  --accent-foreground: oklch(0.18 0.04 260);
+  --accent: #DDE383;
+  --accent-foreground: #222B4D;
 
-  /* Coral / red-orange CTA */
-  --cta: oklch(0.66 0.21 30);
-  --cta-foreground: oklch(0.985 0.005 95);
+  --cta: #006D57;
+  --cta-foreground: #FFFFFF;
 
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --destructive-foreground: #FFFFFF;
 
-  --border: oklch(0.92 0.01 250);
-  --input: oklch(0.94 0.01 250);
-  --ring: oklch(0.66 0.21 30);
+  --border: #E3EAF3;
+  --input: #E3EAF3;
+  --ring: #DDE383;
 }
 
 @layer base {

@@ -13,13 +13,13 @@ export function Hero() {
         alt="Kids playing soccer on a green field"
         className="absolute inset-0 h-full w-full object-cover"
       />
-      {/* navy/blue tinted overlay matching logo/brand primary */}
+      {/* navy tinted overlay matching brand primary #222B4D */}
       <div
         aria-hidden
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, oklch(0.22 0.06 260 / 0.78) 0%, oklch(0.22 0.06 260 / 0.62) 45%, oklch(0.22 0.06 260 / 0.78) 100%)",
+            "linear-gradient(180deg, rgba(34,43,77,0.82) 0%, rgba(34,43,77,0.62) 45%, rgba(34,43,77,0.82) 100%)",
         }}
       />
 
