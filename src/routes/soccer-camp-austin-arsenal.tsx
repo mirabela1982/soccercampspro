@@ -464,190 +464,168 @@ function Benefits() {
   );
 }
 
-/* ---------------- Journey to London (3 phases) ---------------- */
-function JourneyToLondon() {
+/* ---------------- Phase 02 — Get an Invitation ---------------- */
+function PhaseTwoInvitation() {
   return (
-    <section className="relative overflow-hidden bg-primary text-primary-foreground">
+    <section className="relative overflow-hidden bg-secondary">
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-accent/15 blur-3xl"
+        className="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-accent/40 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-cta/20 blur-3xl"
+        className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-cta/10 blur-3xl"
       />
 
       <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28 lg:px-8">
-        {/* Section intro */}
         <div className="mx-auto max-w-3xl text-center">
-          <span className="text-[11px] font-semibold uppercase tracking-widest text-accent">
-            The Arsenal Journey
+          <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-accent-foreground">
+            <span className="h-1.5 w-1.5 rounded-full bg-cta" />
+            Phase 02 · Get an Invitation
           </span>
-          <h2 className="mt-2 font-display text-3xl font-bold md:text-5xl">
-            From Austin to{" "}
+          <h2 className="mt-4 font-display text-3xl font-bold text-primary md:text-5xl">
+            Stand Out and Get{" "}
             <span className="relative inline-block">
-              <span className="relative z-10">London</span>
+              <span className="relative z-10">Invited to London</span>
               <span className="absolute -bottom-1 left-0 z-0 h-2.5 w-full -skew-x-6 bg-accent/70" />
             </span>
           </h2>
-          <p className="mt-5 text-base text-primary-foreground/80 md:text-lg">
-            Three phases that connect a week of training in Texas with the
-            chance to live the Arsenal experience in London.
+          <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+            At the end of the week, players who show level, attitude and
+            Arsenal values may receive an invitation to continue their journey
+            at exclusive Arsenal Football Development experiences in London.
           </p>
         </div>
 
-        {/* Phase 01 — Austin Soccer Camp */}
-        <div className="mt-16 grid items-center gap-10 lg:grid-cols-2">
-          <div className="order-2 lg:order-1">
-            <span className="inline-flex items-center gap-2 rounded-full bg-accent px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-accent-foreground">
-              Phase 01 · Soccer Camp
-            </span>
-            <h3 className="mt-4 font-display text-3xl font-bold md:text-4xl">
-              Train at Home in Austin
-            </h3>
-            <p className="mt-4 text-base leading-relaxed text-primary-foreground/85">
-              The journey starts with a 5-day Arsenal camp in Round Rock, TX.
-              Boys and girls ages 7 to 16 train under official Arsenal coaches,
-              learning the same methodology used at the club&apos;s academy in
-              London.
-            </p>
-            <ul className="mt-6 grid gap-2 sm:grid-cols-2">
-              {[
-                "Official Arsenal coaches",
-                "Arsenal academy methodology",
-                "Technical & tactical sessions",
-                "Daily match play",
-              ].map((pt) => (
-                <li
-                  key={pt}
-                  className="flex items-start gap-2 text-sm text-primary-foreground/90"
-                >
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                  {pt}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="order-1 overflow-hidden rounded-3xl border border-primary-foreground/15 lg:order-2">
-            <img
-              src={trainingImage}
-              alt="Arsenal coach training kids at the Austin camp"
-              className="h-full w-full object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Phase 02 — Get an Invitation */}
-        <div className="mt-20 border-t border-primary-foreground/15 pt-16">
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-accent px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-accent-foreground">
-              Phase 02 · Get an Invitation
-            </span>
-            <h3 className="mt-4 font-display text-3xl font-bold md:text-4xl">
-              Stand Out and Get Invited to London
-            </h3>
-            <p className="mt-4 text-base leading-relaxed text-primary-foreground/85">
-              At the end of the week, players who show level, attitude and
-              Arsenal values may receive an invitation to continue their
-              journey at exclusive Arsenal Football Development experiences in
-              London.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {[
-              {
-                n: 1,
-                title: "A Unique Arsenal Experience",
-                text: "Live an unforgettable week learning the Arsenal way — values, culture and football at the highest level.",
-              },
-              {
-                n: 2,
-                title: "Arsenal Methodology",
-                text: "Train with elite coaching staff applying the same methodology used inside the Arsenal academy.",
-              },
-              {
-                n: 3,
-                title: "The London Experience",
-                text: "Be part of the Arsenal Football Development experience in London — the next step after camp.",
-              },
-            ].map((b) => (
-              <article
-                key={b.n}
-                className="group relative overflow-hidden rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5 p-7 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent"
-              >
-                <span className="font-display text-6xl font-extrabold text-accent/40 transition-colors group-hover:text-accent/70">
-                  0{b.n}
-                </span>
-                <h4 className="mt-4 font-display text-xl font-bold">
-                  {b.title}
-                </h4>
-                <p className="mt-3 text-sm leading-relaxed text-primary-foreground/80">
-                  {b.text}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        {/* Phase 03 — Live the Experience in London */}
-        <div className="mt-20 border-t border-primary-foreground/15 pt-16">
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-accent px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-accent-foreground">
-              Phase 03 · London
-            </span>
-            <h3 className="mt-4 font-display text-3xl font-bold md:text-4xl">
-              Train Where Arsenal Trains
-            </h3>
-            <p className="mt-4 text-base leading-relaxed text-primary-foreground/85">
-              For selected players, the journey continues in London through one
-              of two paths — combining football, values and an unforgettable
-              international experience at the home of the club.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <article className="rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5 p-8 backdrop-blur-sm">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cta text-cta-foreground">
-                <Trophy className="h-5 w-5" />
-              </span>
-              <h4 className="mt-5 font-display text-2xl font-bold">
-                Arsenal World Challenge
-              </h4>
-              <p className="mt-3 text-sm leading-relaxed text-primary-foreground/85">
-                An international tournament that brings together teams from
-                Arsenal Football Development camps around the world to compete
-                at the home of Arsenal — an unforgettable experience of values,
-                football and friendship.
-              </p>
-            </article>
-            <article className="rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5 p-8 backdrop-blur-sm">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cta text-cta-foreground">
-                <Plane className="h-5 w-5" />
-              </span>
-              <h4 className="mt-5 font-display text-2xl font-bold">
-                Arsenal Soccer Clinic in London
-              </h4>
-              <p className="mt-3 text-sm leading-relaxed text-primary-foreground/85">
-                A unique all-inclusive week training under the Arsenal
-                methodology in London. Players from camps in the U.S. join a
-                full training week at the club&apos;s facilities — a complete
-                football and cultural experience for the whole family.
-              </p>
-            </article>
-          </div>
-
-          <div className="mt-14 text-center">
-            <a
-              href={REGISTER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-cta px-8 py-4 text-sm font-bold uppercase tracking-widest text-cta-foreground shadow-lg shadow-cta/30 transition-transform hover:scale-[1.02]"
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              n: 1,
+              title: "A Unique Arsenal Experience",
+              text: "Live an unforgettable week learning the Arsenal way — values, culture and football at the highest level.",
+            },
+            {
+              n: 2,
+              title: "Arsenal Methodology",
+              text: "Train with elite coaching staff applying the same methodology used inside the Arsenal academy.",
+            },
+            {
+              n: 3,
+              title: "The London Experience",
+              text: "Be part of the Arsenal Football Development experience in London — the next step after camp.",
+            },
+          ].map((b) => (
+            <article
+              key={b.n}
+              className="group relative overflow-hidden rounded-3xl border border-border bg-card p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-accent hover:shadow-xl"
             >
-              Register and start the journey to London
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
+              <span className="font-display text-6xl font-extrabold text-accent transition-colors group-hover:text-cta">
+                0{b.n}
+              </span>
+              <h4 className="mt-4 font-display text-xl font-bold text-primary">
+                {b.title}
+              </h4>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {b.text}
+              </p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------- Phase 03 — Live the Experience in London ---------------- */
+function PhaseThreeLondon() {
+  return (
+    <section
+      className="relative overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(180deg, #FFFFFF 0%, #F4F7FB 60%, #EAF1FA 100%)",
+      }}
+    >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-32 top-10 h-96 w-96 rounded-full blur-3xl"
+        style={{ backgroundColor: "rgba(133, 169, 211, 0.35)" }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-accent/30 blur-3xl"
+      />
+
+      <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <span
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-primary-foreground"
+            style={{ backgroundColor: "#85A9D3" }}
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            Phase 03 · London
+          </span>
+          <h2 className="mt-4 font-display text-3xl font-bold text-primary md:text-5xl">
+            Train Where{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10">Arsenal Trains</span>
+              <span
+                className="absolute -bottom-1 left-0 z-0 h-2.5 w-full -skew-x-6"
+                style={{ backgroundColor: "#85A9D3" }}
+              />
+            </span>
+          </h2>
+          <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+            For selected players, the journey continues in London through one
+            of two paths — combining football, values and an unforgettable
+            international experience at the home of the club.
+          </p>
+        </div>
+
+        <div className="mt-14 grid gap-6 md:grid-cols-2">
+          <article className="rounded-3xl border-2 border-accent bg-card p-8 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl">
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cta text-cta-foreground">
+              <Trophy className="h-5 w-5" />
+            </span>
+            <h4 className="mt-5 font-display text-2xl font-bold text-primary">
+              Arsenal World Challenge
+            </h4>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              An international tournament that brings together teams from
+              Arsenal Football Development camps around the world to compete at
+              the home of Arsenal — an unforgettable experience of values,
+              football and friendship.
+            </p>
+          </article>
+          <article
+            className="rounded-3xl border-2 bg-card p-8 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl"
+            style={{ borderColor: "#85A9D3" }}
+          >
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
+              <Plane className="h-5 w-5" />
+            </span>
+            <h4 className="mt-5 font-display text-2xl font-bold text-primary">
+              Arsenal Soccer Clinic in London
+            </h4>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              A unique all-inclusive week training under the Arsenal
+              methodology in London. Players from camps in the U.S. join a full
+              training week at the club&apos;s facilities — a complete football
+              and cultural experience for the whole family.
+            </p>
+          </article>
+        </div>
+
+        <div className="mt-14 text-center">
+          <a
+            href={REGISTER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-cta px-8 py-4 text-sm font-bold uppercase tracking-widest text-cta-foreground shadow-lg shadow-cta/30 transition-transform hover:scale-[1.02]"
+          >
+            Register and start the journey to London
+            <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </div>
     </section>
