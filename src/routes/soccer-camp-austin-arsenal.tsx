@@ -10,7 +10,7 @@ import {
   ShieldCheck,
   Sparkles,
   Plane,
-  ClipboardList,
+  
   Target,
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
