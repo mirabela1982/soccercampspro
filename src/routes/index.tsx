@@ -53,8 +53,8 @@ function Home() {
           <Hero />
         </div>
         <SearchBar />
-        <FeaturedCamps />
         <TopClubs />
+        <FeaturedCamps />
         <ExperienceCards />
         <WhyUs />
         <TripsBlock />
