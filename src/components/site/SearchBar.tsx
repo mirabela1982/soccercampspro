@@ -46,7 +46,7 @@ export function SearchBar() {
               Search
             </span>
             <h2 className="mt-1 font-display text-2xl font-bold text-primary md:text-3xl">
-              Find Your Camp
+              Find Your Soccer Camp
             </h2>
           </div>
           <div className="hidden text-xs text-muted-foreground md:block">

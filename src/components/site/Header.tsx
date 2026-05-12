@@ -66,7 +66,7 @@ export function Header() {
             href="#search"
             className="hidden rounded-full bg-cta px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-cta-foreground shadow-sm transition-transform hover:scale-[1.02] md:inline-flex"
           >
-            Find Your Camp
+            Find Your Soccer Camp
           </a>
           <button
             type="button"
@@ -108,7 +108,7 @@ export function Header() {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-cta px-5 py-3 text-xs font-bold uppercase tracking-widest text-cta-foreground"
             >
-              Find Your Camp
+              Find Your Soccer Camp
             </a>
           </nav>
         </div>
