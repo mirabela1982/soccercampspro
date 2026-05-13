@@ -363,29 +363,6 @@ function TrainingProgram() {
   );
 }
 
-function PlayersBand() {
-  return (
-    <section className="relative">
-      <div className="relative h-[55vh] min-h-[380px] w-full overflow-hidden md:h-[70vh]">
-        <img
-          src={playersImage}
-          alt="Young Arsenal Football Development players on the pitch"
-          className="absolute inset-0 h-full w-full object-cover"
-          loading="lazy"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(34,43,77,0.25) 0%, rgba(34,43,77,0.15) 50%, rgba(34,43,77,0.55) 100%)",
-          }}
-        />
-      </div>
-    </section>
-  );
-}
-
 function Includes() {
   const items = [
     "5 days of training with official Arsenal coaches",
