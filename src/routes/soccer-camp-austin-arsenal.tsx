@@ -76,6 +76,7 @@ function AustinArsenalPage() {
         <Intro />
         <TrainingProgram />
         <Includes />
+        <PlayersBand />
         <Benefits />
         <PhaseTwoInvitation />
         <PhaseThreeLondon />
@@ -280,16 +281,6 @@ function Intro() {
         challenged at their level — learning what each position truly demands
         and how their role fits inside a winning team.
       </p>
-      <div className="mx-auto mt-12 w-full max-w-md">
-        <div className="overflow-hidden rounded-2xl border-2 border-accent shadow-lg">
-          <img
-            src={playersImage}
-            alt="Young Arsenal Football Development players"
-            className="h-56 w-full object-cover md:h-64"
-            loading="lazy"
-          />
-        </div>
-      </div>
     </section>
   );
 }
@@ -368,6 +359,29 @@ function TrainingProgram() {
             ))}
           </ul>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function PlayersBand() {
+  return (
+    <section className="relative">
+      <div className="relative h-[40vh] min-h-[280px] w-full overflow-hidden md:h-[55vh]">
+        <img
+          src={playersImage}
+          alt="Young Arsenal Football Development players on the pitch"
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(34,43,77,0.25) 0%, rgba(34,43,77,0.10) 50%, rgba(34,43,77,0.45) 100%)",
+          }}
+        />
       </div>
     </section>
   );
