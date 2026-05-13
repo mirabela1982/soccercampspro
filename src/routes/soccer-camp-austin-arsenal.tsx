@@ -290,11 +290,12 @@ function TrainingProgram() {
   return (
     <section className="bg-secondary">
       <div className="grid w-full grid-cols-1 md:grid-cols-12 md:items-stretch">
-        <div className="relative md:col-span-7">
+        <div className="relative md:col-span-6">
           <img
             src={trainingImage}
             alt="Arsenal coach leading a youth training drill in Austin"
             className="block h-full w-full object-cover"
+            style={{ objectPosition: "left center" }}
             loading="lazy"
             width={1920}
             height={1280}
@@ -309,7 +310,7 @@ function TrainingProgram() {
           </div>
         </div>
 
-        <div className="px-4 py-16 md:col-span-5 md:px-10 md:py-20 lg:px-14">
+        <div className="px-4 py-16 md:col-span-6 md:px-10 md:py-20 lg:px-14">
           <span className="text-[11px] font-semibold uppercase tracking-widest text-cta">
             The training program
           </span>
