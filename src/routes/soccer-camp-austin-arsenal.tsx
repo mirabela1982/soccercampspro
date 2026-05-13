@@ -300,16 +300,6 @@ function TrainingProgram() {
             width={1920}
             height={1280}
           />
-          <div className="hidden items-center gap-4 bg-cta px-6 py-4 text-cta-foreground md:flex">
-            <div>
-              <div className="text-[10px] font-bold uppercase tracking-widest opacity-80">
-                Daily structure
-              </div>
-              <div className="font-display text-lg font-bold">
-                AM drills · PM match play
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="px-4 py-16 md:col-span-6 md:px-10 md:py-20 lg:px-14">
