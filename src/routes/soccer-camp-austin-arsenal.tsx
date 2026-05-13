@@ -311,7 +311,7 @@ function TrainingProgram() {
           </div>
         </div>
 
-        <div>
+        <div className="md:col-span-5">
           <span className="text-[11px] font-semibold uppercase tracking-widest text-cta">
             The training program
           </span>
