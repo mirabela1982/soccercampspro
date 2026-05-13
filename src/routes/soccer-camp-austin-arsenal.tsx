@@ -17,6 +17,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import heroImage from "@/assets/austin-arsenal-hero.jpg";
 import trainingImage from "@/assets/austin-arsenal-training.jpg";
+import playersImage from "@/assets/austin-arsenal-players.jpg";
 
 const REGISTER_URL = "https://cvent.me/x9OV7Z";
 
