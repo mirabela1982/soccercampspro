@@ -289,19 +289,17 @@ function Intro() {
 function TrainingProgram() {
   return (
     <section className="bg-secondary">
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-20 md:grid-cols-12 md:items-center md:px-6 md:py-28 lg:gap-16 lg:px-8">
+      <div className="grid w-full grid-cols-1 md:grid-cols-12 md:items-stretch">
         <div className="relative md:col-span-7">
-          <div className="overflow-hidden rounded-3xl border-2 border-accent shadow-2xl">
-            <img
-              src={trainingImage}
-              alt="Arsenal coach leading a youth training drill in Austin"
-              className="h-full max-h-[720px] w-full object-cover md:aspect-[4/5] md:max-h-none lg:aspect-[5/6]"
-              loading="lazy"
-              width={1280}
-              height={1600}
-            />
-          </div>
-          <div className="absolute -bottom-6 -right-4 hidden rounded-2xl bg-cta px-5 py-4 text-cta-foreground shadow-xl md:block">
+          <img
+            src={trainingImage}
+            alt="Arsenal coach leading a youth training drill in Austin"
+            className="block h-full w-full object-cover"
+            loading="lazy"
+            width={1920}
+            height={1280}
+          />
+          <div className="absolute bottom-4 right-4 hidden rounded-2xl bg-cta px-5 py-4 text-cta-foreground shadow-xl md:block">
             <div className="text-[10px] font-bold uppercase tracking-widest opacity-80">
               Daily structure
             </div>
@@ -311,7 +309,7 @@ function TrainingProgram() {
           </div>
         </div>
 
-        <div className="md:col-span-5">
+        <div className="px-4 py-16 md:col-span-5 md:px-10 md:py-20 lg:px-14">
           <span className="text-[11px] font-semibold uppercase tracking-widest text-cta">
             The training program
           </span>
