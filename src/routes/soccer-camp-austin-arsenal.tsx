@@ -280,6 +280,16 @@ function Intro() {
         challenged at their level — learning what each position truly demands
         and how their role fits inside a winning team.
       </p>
+      <div className="mx-auto mt-12 w-full max-w-md">
+        <div className="overflow-hidden rounded-2xl border-2 border-accent shadow-lg">
+          <img
+            src={playersImage}
+            alt="Young Arsenal Football Development players"
+            className="h-56 w-full object-cover md:h-64"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </section>
   );
 }
@@ -425,29 +435,17 @@ function Benefits() {
   return (
     <section className="bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
-          <div className="max-w-2xl">
-            <span className="text-[11px] font-semibold uppercase tracking-widest text-cta">
-              Why parents choose this camp
-            </span>
-            <h2 className="mt-2 font-display text-3xl font-bold text-primary md:text-5xl">
-              More than a soccer week
-            </h2>
-            <p className="mt-4 text-base text-muted-foreground md:text-lg">
-              A safe, structured experience designed to develop your child as a
-              player and as a person.
-            </p>
-          </div>
-          <div className="hidden md:block">
-            <div className="overflow-hidden rounded-2xl border-2 border-accent shadow-lg">
-              <img
-                src={playersImage}
-                alt="Young Arsenal Football Development players"
-                className="h-44 w-72 object-cover"
-                loading="lazy"
-              />
-            </div>
-          </div>
+        <div className="max-w-2xl">
+          <span className="text-[11px] font-semibold uppercase tracking-widest text-cta">
+            Why parents choose this camp
+          </span>
+          <h2 className="mt-2 font-display text-3xl font-bold text-primary md:text-5xl">
+            More than a soccer week
+          </h2>
+          <p className="mt-4 text-base text-muted-foreground md:text-lg">
+            A safe, structured experience designed to develop your child as a
+            player and as a person.
+          </p>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
