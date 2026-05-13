@@ -310,7 +310,7 @@ function TrainingProgram() {
           </div>
         </div>
 
-        <div className="px-4 py-16 md:col-span-5 md:px-10 md:py-20 lg:px-14">
+        <div className="px-4 py-16 md:col-span-6 md:px-10 md:py-20 lg:px-14">
           <span className="text-[11px] font-semibold uppercase tracking-widest text-cta">
             The training program
           </span>
