@@ -280,16 +280,6 @@ function Intro() {
         challenged at their level — learning what each position truly demands
         and how their role fits inside a winning team.
       </p>
-      <div className="mx-auto mt-12 w-full max-w-md">
-        <div className="overflow-hidden rounded-2xl border-2 border-accent shadow-lg">
-          <img
-            src={playersImage}
-            alt="Young Arsenal Football Development players"
-            className="h-56 w-full object-cover md:h-64"
-            loading="lazy"
-          />
-        </div>
-      </div>
     </section>
   );
 }
