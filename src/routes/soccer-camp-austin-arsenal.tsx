@@ -491,6 +491,17 @@ function Benefits() {
 function PhaseTwoInvitation() {
   return (
     <section className="relative overflow-hidden bg-secondary">
+      <img
+        src={londonBridgeImage}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-15"
+        loading="lazy"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-secondary/80 via-secondary/70 to-secondary/90"
+      />
       <div
         aria-hidden
         className="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-accent/40 blur-3xl"
