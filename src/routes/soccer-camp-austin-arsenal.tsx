@@ -17,6 +17,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import heroImage from "@/assets/austin-arsenal-hero.jpg";
 import trainingImage from "@/assets/austin-arsenal-training.jpg";
+import playersImage from "@/assets/austin-arsenal-players.jpg";
 
 const REGISTER_URL = "https://cvent.me/x9OV7Z";
 
@@ -75,6 +76,7 @@ function AustinArsenalPage() {
         <Intro />
         <TrainingProgram />
         <Includes />
+        <PlayersBand />
         <Benefits />
         <PhaseTwoInvitation />
         <PhaseThreeLondon />
@@ -357,6 +359,29 @@ function TrainingProgram() {
             ))}
           </ul>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function PlayersBand() {
+  return (
+    <section className="relative">
+      <div className="relative h-[55vh] min-h-[380px] w-full overflow-hidden md:h-[70vh]">
+        <img
+          src={playersImage}
+          alt="Young Arsenal Football Development players on the pitch"
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(34,43,77,0.25) 0%, rgba(34,43,77,0.15) 50%, rgba(34,43,77,0.55) 100%)",
+          }}
+        />
       </div>
     </section>
   );
