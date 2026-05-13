@@ -76,7 +76,6 @@ function AustinArsenalPage() {
         <Intro />
         <TrainingProgram />
         <Includes />
-        <PlayersBand />
         <Benefits />
         <PhaseTwoInvitation />
         <PhaseThreeLondon />
@@ -364,29 +363,6 @@ function TrainingProgram() {
   );
 }
 
-function PlayersBand() {
-  return (
-    <section className="relative">
-      <div className="relative h-[55vh] min-h-[380px] w-full overflow-hidden md:h-[70vh]">
-        <img
-          src={playersImage}
-          alt="Young Arsenal Football Development players on the pitch"
-          className="absolute inset-0 h-full w-full object-cover"
-          loading="lazy"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(34,43,77,0.25) 0%, rgba(34,43,77,0.15) 50%, rgba(34,43,77,0.55) 100%)",
-          }}
-        />
-      </div>
-    </section>
-  );
-}
-
 function Includes() {
   const items = [
     "5 days of training with official Arsenal coaches",
@@ -449,17 +425,29 @@ function Benefits() {
   return (
     <section className="bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28 lg:px-8">
-        <div className="max-w-2xl">
-          <span className="text-[11px] font-semibold uppercase tracking-widest text-cta">
-            Why parents choose this camp
-          </span>
-          <h2 className="mt-2 font-display text-3xl font-bold text-primary md:text-5xl">
-            More than a soccer week
-          </h2>
-          <p className="mt-4 text-base text-muted-foreground md:text-lg">
-            A safe, structured experience designed to develop your child as a
-            player and as a person.
-          </p>
+        <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
+          <div className="max-w-2xl">
+            <span className="text-[11px] font-semibold uppercase tracking-widest text-cta">
+              Why parents choose this camp
+            </span>
+            <h2 className="mt-2 font-display text-3xl font-bold text-primary md:text-5xl">
+              More than a soccer week
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground md:text-lg">
+              A safe, structured experience designed to develop your child as a
+              player and as a person.
+            </p>
+          </div>
+          <div className="hidden md:block">
+            <div className="overflow-hidden rounded-2xl border-2 border-accent shadow-lg">
+              <img
+                src={playersImage}
+                alt="Young Arsenal Football Development players"
+                className="h-44 w-72 object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
