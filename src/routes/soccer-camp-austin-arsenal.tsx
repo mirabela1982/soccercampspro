@@ -76,7 +76,6 @@ function AustinArsenalPage() {
         <Intro />
         <TrainingProgram />
         <Includes />
-        <PlayersBand />
         <Benefits />
         <PhaseTwoInvitation />
         <PhaseThreeLondon />
