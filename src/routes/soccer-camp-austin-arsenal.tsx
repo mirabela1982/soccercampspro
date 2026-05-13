@@ -495,12 +495,12 @@ function PhaseTwoInvitation() {
         src={londonBridgeImage}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-15"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40"
         loading="lazy"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-secondary/80 via-secondary/70 to-secondary/90"
+        className="pointer-events-none absolute inset-0 bg-secondary/55"
       />
       <div
         aria-hidden
