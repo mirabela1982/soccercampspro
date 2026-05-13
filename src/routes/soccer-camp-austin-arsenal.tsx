@@ -372,7 +372,7 @@ function PlayersBand() {
           src={playersImage}
           alt="Young Arsenal Football Development players on the pitch"
           className="absolute inset-0 h-full w-full object-cover"
-          style={{ objectPosition: "center 35%" }}
+          style={{ objectPosition: "center 20%" }}
           loading="lazy"
         />
         <div
