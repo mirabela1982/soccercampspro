@@ -290,22 +290,24 @@ function TrainingProgram() {
   return (
     <section className="bg-secondary">
       <div className="grid w-full grid-cols-1 md:grid-cols-12 md:items-stretch">
-        <div className="relative md:col-span-6">
+        <div className="md:col-span-6">
           <img
             src={trainingImage}
             alt="Arsenal coach leading a youth training drill in Austin"
             className="block h-full w-full object-cover"
-            style={{ objectPosition: "left center" }}
+            style={{ objectPosition: "55% center" }}
             loading="lazy"
             width={1920}
             height={1280}
           />
-          <div className="absolute bottom-4 right-4 hidden rounded-2xl bg-cta px-5 py-4 text-cta-foreground shadow-xl md:block">
-            <div className="text-[10px] font-bold uppercase tracking-widest opacity-80">
-              Daily structure
-            </div>
-            <div className="font-display text-lg font-bold">
-              AM drills · PM match play
+          <div className="hidden items-center gap-4 bg-cta px-6 py-4 text-cta-foreground md:flex">
+            <div>
+              <div className="text-[10px] font-bold uppercase tracking-widest opacity-80">
+                Daily structure
+              </div>
+              <div className="font-display text-lg font-bold">
+                AM drills · PM match play
+              </div>
             </div>
           </div>
         </div>
