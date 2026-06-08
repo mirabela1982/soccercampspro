@@ -1,4 +1,4 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouter } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
 
@@ -15,6 +15,40 @@ function NotFoundComponent() {
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-full bg-cta px-5 py-2.5 text-sm font-semibold text-cta-foreground transition-colors hover:opacity-90"
+          >
+            Go home
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+  console.error(error);
+  const router = useRouter();
+
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="max-w-md text-center">
+        <h1 className="font-display text-4xl font-bold text-primary">Soccer Camps Pro</h1>
+        <p className="mt-3 text-sm text-muted-foreground">
+          The page could not load correctly. Please try again.
+        </p>
+        <div className="mt-6 flex items-center justify-center gap-3">
+          <button
+            type="button"
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
+            className="inline-flex items-center justify-center rounded-full bg-cta px-5 py-2.5 text-sm font-semibold text-cta-foreground transition-colors hover:opacity-90"
+          >
+            Try again
+          </button>
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:opacity-90"
           >
             Go home
           </Link>
@@ -63,6 +97,7 @@ export const Route = createRootRoute({
   }),
   shellComponent: RootShell,
   component: RootComponent,
+  errorComponent: ErrorComponent,
   notFoundComponent: NotFoundComponent,
 });
 
