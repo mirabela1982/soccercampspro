@@ -4,6 +4,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import logoUrl from "@/assets/logo.svg";
 
 const campsItems = [
+  { label: "Arsenal Soccer Camps", to: "/club/arsenal-soccer-camps" },
   { label: "Arsenal Soccer Camp — Austin", to: "/soccer-camp-austin-arsenal" },
 ];
 
