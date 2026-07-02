@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SoccerCampAustinArsenalRouteImport } from './routes/soccer-camp-austin-arsenal'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ClubArsenalSoccerCampsRouteImport } from './routes/club.arsenal-soccer-camps'
 
 const SoccerCampAustinArsenalRoute = SoccerCampAustinArsenalRouteImport.update({
   id: '/soccer-camp-austin-arsenal',
@@ -22,31 +23,44 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ClubArsenalSoccerCampsRoute = ClubArsenalSoccerCampsRouteImport.update({
+  id: '/club/arsenal-soccer-camps',
+  path: '/club/arsenal-soccer-camps',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/soccer-camp-austin-arsenal': typeof SoccerCampAustinArsenalRoute
+  '/club/arsenal-soccer-camps': typeof ClubArsenalSoccerCampsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/soccer-camp-austin-arsenal': typeof SoccerCampAustinArsenalRoute
+  '/club/arsenal-soccer-camps': typeof ClubArsenalSoccerCampsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/soccer-camp-austin-arsenal': typeof SoccerCampAustinArsenalRoute
+  '/club/arsenal-soccer-camps': typeof ClubArsenalSoccerCampsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/soccer-camp-austin-arsenal'
+  fullPaths: '/' | '/soccer-camp-austin-arsenal' | '/club/arsenal-soccer-camps'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/soccer-camp-austin-arsenal'
-  id: '__root__' | '/' | '/soccer-camp-austin-arsenal'
+  to: '/' | '/soccer-camp-austin-arsenal' | '/club/arsenal-soccer-camps'
+  id:
+    | '__root__'
+    | '/'
+    | '/soccer-camp-austin-arsenal'
+    | '/club/arsenal-soccer-camps'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SoccerCampAustinArsenalRoute: typeof SoccerCampAustinArsenalRoute
+  ClubArsenalSoccerCampsRoute: typeof ClubArsenalSoccerCampsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,22 +79,21 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/club/arsenal-soccer-camps': {
+      id: '/club/arsenal-soccer-camps'
+      path: '/club/arsenal-soccer-camps'
+      fullPath: '/club/arsenal-soccer-camps'
+      preLoaderRoute: typeof ClubArsenalSoccerCampsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SoccerCampAustinArsenalRoute: SoccerCampAustinArsenalRoute,
+  ClubArsenalSoccerCampsRoute: ClubArsenalSoccerCampsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}

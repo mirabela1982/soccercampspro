@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import arsenalStadium from "/images/stadium-arsenal.jpg";
+const arsenalStadium = "/images/stadium-arsenal.jpg";
 
 const ARSENAL_LOGO =
   "https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg";
