@@ -28,10 +28,6 @@ export function Newsletter() {
         />
       </svg>
 
-      <div
-        aria-hidden
-        className="pointer-events-none absolute right-1/4 bottom-0 h-64 w-64 rounded-full bg-accent/20 blur-3xl"
-      />
 
       <div className="relative mx-auto max-w-3xl px-4 pb-20 pt-32 text-center md:px-6 md:pb-28 md:pt-44 lg:px-8">
         <span className="inline-flex items-center gap-2 rounded-full bg-accent/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
