@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   ArrowRight,
-  Trophy,
+  MapPin,
+  Shield,
   Plane,
-  Users,
   ClipboardList,
   Star,
   Globe2,
@@ -13,6 +13,7 @@ import {
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Newsletter } from "@/components/site/Newsletter";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/trips")({
   head: () => ({
@@ -46,25 +47,14 @@ export const Route = createFileRoute("/trips")({
 
 const experiences = [
   {
-    icon: Trophy,
-    title: "Soccer Camps",
-    subtitle: "Train close to home",
-    text: "Join official or partner soccer camps led by experienced coaches, designed to help players improve their technical skills, confidence, and understanding of the game.",
-    cta: "View Soccer Camps",
+    icon: MapPin,
+    title: "Choose by city",
+    text: "Find available soccer camps in your preferred location and see which club programs are offered there.",
   },
   {
-    icon: Plane,
-    title: "Soccer Trips",
-    subtitle: "Travel to Europe",
-    text: "Selected players get the opportunity to travel abroad, train in elite environments, and experience soccer culture in iconic destinations such as London, Paris, and Munich.",
-    cta: "View Soccer Trips",
-  },
-  {
-    icon: Users,
-    title: "Club Experiences",
-    subtitle: "Connect with top soccer brands",
-    text: "Discover programs linked to clubs and academies such as PSG Academy, FC Bayern, Arsenal, and other leading soccer institutions.",
-    cta: "Explore Clubs",
+    icon: Shield,
+    title: "Choose by club program",
+    text: "Explore PSG Academy, FC Bayern, and Arsenal camp options, then select from the available cities.",
   },
 ];
 
@@ -228,15 +218,20 @@ function TripsPage() {
         <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28 lg:px-8">
           <div className="max-w-2xl">
             <span className="text-[11px] font-semibold uppercase tracking-widest text-accent">
-              Three ways to play
+              Find a camp
             </span>
             <h2 className="mt-2 font-display text-3xl font-bold md:text-5xl">
-              Choose your soccer experience
+              Find the right camp for your player
             </h2>
+            <p className="mt-4 text-base text-primary-foreground/75 md:text-lg">
+              Families can start by choosing either a city or a club program.
+              Available camps depend on the selected location and program, making
+              it easy to find the right option for your player.
+            </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {experiences.map(({ icon: Icon, title, subtitle, text, cta }) => (
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {experiences.map(({ icon: Icon, title, text }) => (
               <article
                 key={title}
                 className="group flex flex-col rounded-3xl bg-card p-7 text-foreground shadow-xl border-2 border-accent transition-all hover:-translate-y-1 hover:shadow-2xl"
@@ -247,20 +242,17 @@ function TripsPage() {
                 <h3 className="mt-6 font-display text-2xl font-bold text-primary">
                   {title}
                 </h3>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-cta">
-                  {subtitle}
-                </p>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
                   {text}
                 </p>
-                <a
-                  href="#clubs"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cta transition-transform group-hover:translate-x-1"
-                >
-                  {cta} <ArrowRight className="h-4 w-4" />
-                </a>
               </article>
             ))}
+          </div>
+
+          <div className="mt-12">
+            <Button asChild size="lg">
+              <Link to="/">Explore Camps</Link>
+            </Button>
           </div>
         </div>
       </section>
