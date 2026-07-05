@@ -4,6 +4,7 @@ import {
   ArrowRight,
   MapPin,
   Shield,
+  Plane,
   ClipboardList,
   Star,
   Globe2,
