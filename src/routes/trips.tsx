@@ -2,9 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   ArrowRight,
-  Trophy,
-  Plane,
-  Users,
+  MapPin,
+  Shield,
   ClipboardList,
   Star,
   Globe2,
@@ -13,6 +12,7 @@ import {
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Newsletter } from "@/components/site/Newsletter";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/trips")({
   head: () => ({
@@ -46,25 +46,14 @@ export const Route = createFileRoute("/trips")({
 
 const experiences = [
   {
-    icon: Trophy,
-    title: "Soccer Camps",
-    subtitle: "Train close to home",
-    text: "Join official or partner soccer camps led by experienced coaches, designed to help players improve their technical skills, confidence, and understanding of the game.",
-    cta: "View Soccer Camps",
+    icon: MapPin,
+    title: "Choose by city",
+    text: "Find available soccer camps in your preferred location and see which club programs are offered there.",
   },
   {
-    icon: Plane,
-    title: "Soccer Trips",
-    subtitle: "Travel to Europe",
-    text: "Selected players get the opportunity to travel abroad, train in elite environments, and experience soccer culture in iconic destinations such as London, Paris, and Munich.",
-    cta: "View Soccer Trips",
-  },
-  {
-    icon: Users,
-    title: "Club Experiences",
-    subtitle: "Connect with top soccer brands",
-    text: "Discover programs linked to clubs and academies such as PSG Academy, FC Bayern, Arsenal, and other leading soccer institutions.",
-    cta: "Explore Clubs",
+    icon: Shield,
+    title: "Choose by club program",
+    text: "Explore PSG Academy, FC Bayern, and Arsenal camp options, then select from the available cities.",
   },
 ];
 
