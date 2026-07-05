@@ -218,15 +218,20 @@ function TripsPage() {
         <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28 lg:px-8">
           <div className="max-w-2xl">
             <span className="text-[11px] font-semibold uppercase tracking-widest text-accent">
-              Three ways to play
+              Find a camp
             </span>
             <h2 className="mt-2 font-display text-3xl font-bold md:text-5xl">
-              Choose your soccer experience
+              Find the right camp for your player
             </h2>
+            <p className="mt-4 text-base text-primary-foreground/75 md:text-lg">
+              Families can start by choosing either a city or a club program.
+              Available camps depend on the selected location and program, making
+              it easy to find the right option for your player.
+            </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {experiences.map(({ icon: Icon, title, subtitle, text, cta }) => (
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {experiences.map(({ icon: Icon, title, text }) => (
               <article
                 key={title}
                 className="group flex flex-col rounded-3xl bg-card p-7 text-foreground shadow-xl border-2 border-accent transition-all hover:-translate-y-1 hover:shadow-2xl"
@@ -237,20 +242,17 @@ function TripsPage() {
                 <h3 className="mt-6 font-display text-2xl font-bold text-primary">
                   {title}
                 </h3>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-cta">
-                  {subtitle}
-                </p>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
                   {text}
                 </p>
-                <a
-                  href="#clubs"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cta transition-transform group-hover:translate-x-1"
-                >
-                  {cta} <ArrowRight className="h-4 w-4" />
-                </a>
               </article>
             ))}
+          </div>
+
+          <div className="mt-12">
+            <Button asChild size="lg">
+              <Link to="/">Explore Camps</Link>
+            </Button>
           </div>
         </div>
       </section>
