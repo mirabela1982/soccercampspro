@@ -9,7 +9,7 @@ const campsItems = [
 ];
 
 const navItems = [
-  { label: "Trips", href: "#trips" },
+  { label: "Trips", href: "/trips" },
   { label: "Clubs", href: "#clubs" },
   { label: "Blog", href: "#news" },
   { label: "Contact", href: "/contact" },

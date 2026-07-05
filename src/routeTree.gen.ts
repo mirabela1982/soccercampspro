@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TripsRouteImport } from './routes/trips'
 import { Route as SoccerCampAustinArsenalRouteImport } from './routes/soccer-camp-austin-arsenal'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ClubArsenalSoccerCampsRouteImport } from './routes/club.arsenal-soccer-camps'
 
+const TripsRoute = TripsRouteImport.update({
+  id: '/trips',
+  path: '/trips',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SoccerCampAustinArsenalRoute = SoccerCampAustinArsenalRouteImport.update({
   id: '/soccer-camp-austin-arsenal',
   path: '/soccer-camp-austin-arsenal',
@@ -39,12 +45,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/soccer-camp-austin-arsenal': typeof SoccerCampAustinArsenalRoute
+  '/trips': typeof TripsRoute
   '/club/arsenal-soccer-camps': typeof ClubArsenalSoccerCampsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/soccer-camp-austin-arsenal': typeof SoccerCampAustinArsenalRoute
+  '/trips': typeof TripsRoute
   '/club/arsenal-soccer-camps': typeof ClubArsenalSoccerCampsRoute
 }
 export interface FileRoutesById {
@@ -52,6 +60,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/soccer-camp-austin-arsenal': typeof SoccerCampAustinArsenalRoute
+  '/trips': typeof TripsRoute
   '/club/arsenal-soccer-camps': typeof ClubArsenalSoccerCampsRoute
 }
 export interface FileRouteTypes {
@@ -60,18 +69,21 @@ export interface FileRouteTypes {
     | '/'
     | '/contact'
     | '/soccer-camp-austin-arsenal'
+    | '/trips'
     | '/club/arsenal-soccer-camps'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/contact'
     | '/soccer-camp-austin-arsenal'
+    | '/trips'
     | '/club/arsenal-soccer-camps'
   id:
     | '__root__'
     | '/'
     | '/contact'
     | '/soccer-camp-austin-arsenal'
+    | '/trips'
     | '/club/arsenal-soccer-camps'
   fileRoutesById: FileRoutesById
 }
@@ -79,11 +91,19 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
   SoccerCampAustinArsenalRoute: typeof SoccerCampAustinArsenalRoute
+  TripsRoute: typeof TripsRoute
   ClubArsenalSoccerCampsRoute: typeof ClubArsenalSoccerCampsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/trips': {
+      id: '/trips'
+      path: '/trips'
+      fullPath: '/trips'
+      preLoaderRoute: typeof TripsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/soccer-camp-austin-arsenal': {
       id: '/soccer-camp-austin-arsenal'
       path: '/soccer-camp-austin-arsenal'
@@ -119,6 +139,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
   SoccerCampAustinArsenalRoute: SoccerCampAustinArsenalRoute,
+  TripsRoute: TripsRoute,
   ClubArsenalSoccerCampsRoute: ClubArsenalSoccerCampsRoute,
 }
 export const routeTree = rootRouteImport
